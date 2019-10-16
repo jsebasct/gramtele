@@ -1,7 +1,5 @@
-FROM node:8.16.2-jessie
+FROM nginx
 WORKDIR /app/src
-COPY package.json .
-COPY server.js .
-RUN npm install
-EXPOSE 3000
-CMD node server
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY conf.d/ /etc/nginx/conf.d/
+CMD "nginx -g 'daemon off;' "

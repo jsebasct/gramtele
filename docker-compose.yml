@@ -1,7 +1,19 @@
 version: "3.7"
 services:
-  telegram:
+  main:
     build: .
-    ports:
-      - "3000:3000"
-    command: ["node", "server.js"]
+    ports: 
+      - 3000:80
+    command: "nginx -g 'daemon off;' "
+
+  # back_1:
+  #   build: ./server1
+  #   ports:
+  #     - "3001:3000"
+  #   command: ["node", "server.js"]
+
+  # back_2:
+  #   build: ./server2
+  #   ports:
+  #     - "3002:3000"
+  #   command: ["node", "server.js"]
