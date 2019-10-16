@@ -13,8 +13,8 @@ services:
       - "3001:3000"
     command: ["node", "server.js"]
 
-  # back_2:
-  #   build: ./server2
-  #   ports:
-  #     - "3002:3000"
-  #   command: ["node", "server.js"]
+  back_2:
+    build: ./server2
+    ports:
+      - "3002:3000"
+    command: ["node", "server.js"]

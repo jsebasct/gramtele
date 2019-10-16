@@ -3,7 +3,7 @@ const express = require('express');
 var app = express();
 
 app.use('/', function(req, res) {
-    res.send('Hello from server 1');
+    res.send('Hello from server 2');
 })
 
 app.listen(3000);
