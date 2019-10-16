@@ -1,4 +1,5 @@
 version: "3.7"
+
 services:
   main:
     build: .
@@ -6,11 +7,11 @@ services:
       - 3000:80
     command: "nginx -g 'daemon off;' "
 
-  # back_1:
-  #   build: ./server1
-  #   ports:
-  #     - "3001:3000"
-  #   command: ["node", "server.js"]
+  back_1:
+    build: ./server1
+    ports:
+      - "3001:3000"
+    command: ["node", "server.js"]
 
   # back_2:
   #   build: ./server2
