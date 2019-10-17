@@ -1,6 +1,7 @@
 version: "3.7"
 
 services:
+
   main:
     build: .
     ports: 
@@ -18,3 +19,9 @@ services:
     ports:
       - "3002:3000"
     command: ["node", "server.js"]
+
+  ergo_proxy:
+    image: haproxy:1.7
+    volumes: 
+      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    
