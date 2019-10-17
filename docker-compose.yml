@@ -22,4 +22,6 @@ services:
 
   ergo_proxy:
     image: haproxy:1.7
+    volumes: 
+      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
     
